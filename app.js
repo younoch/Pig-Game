@@ -13,7 +13,7 @@ var scores, roundScores, activePlayer, dice;
 
 scores = [0,0];
 roundScores = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 document.querySelector('.dice').style.display = 'none';
 
@@ -32,10 +32,23 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     diceDom.src = 'dice-' + dice + '.png';
 
     //3. Update the round score If the rolled number was NOT a 1
-    if(dice > 1) {
-        //Add score
+    if(dice !== 1) {
+        roundScores += dice;
+        document.querySelector('#current-'+ activePlayer).textContent = roundScores;
     } else {
         //Next player
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        roundScores = 0;
+
+        document.getElementById('current-0').textContent = '0';
+        document.getElementById('current-1').textContent = '0';
+
+        document.querySelector('player-0-panel').classList.toggle('active');
+        document.querySelector('player-1-panel').classList.toggle('active');
+
+        //document.querySelector('player-0-panel').classList.remove('active');
+        //document.querySelector('player-1-panel').classList.add('active');
+
     }
 });
 
@@ -45,4 +58,4 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 //console.log(x);
 
 
-//7. Events and Event Handling Rolling the Dice.mp4 (07:00)
+//7. Events and Event Handling Rolling the Dice.mp4 (07:00)  
