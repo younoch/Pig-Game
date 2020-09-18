@@ -45,4 +45,4 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 //console.log(x);
 
 
-//7. Events and Event Handling Rolling the Dice.mp4 (07:00)
+//8. Updating Scores and Changing the Active Playermp4 (07:00)
