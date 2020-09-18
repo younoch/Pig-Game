@@ -100,4 +100,4 @@ document.querySelector('.player-0-panel').classList.add('active');
 //console.log(x);
 
 
-//9. Implementing Our 'Hold' Function and the DRY Principle.mp4(09:00)
+//12. Coding Challenge 6.mp4(00:00)
