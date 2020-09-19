@@ -206,10 +206,14 @@ i {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    padding-left: 25px;
 }
-.item {
+.list {
     font-weight: bolder;
     font-size: 20px;
+    padding-left: 35px;
+}
+.item {
     padding-bottom: 10px;
 }
 .close {
@@ -236,6 +240,7 @@ i {
     bottom: 25px;
     background-color: #EB4D4D;
     width: 100%;
+    padding: 15px 0 15px;
 }
 .author p{
     color: white;
