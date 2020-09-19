@@ -140,6 +140,11 @@ i {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
+.info { top: 525px;}
+.info a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .dice {
     position: absolute;
@@ -152,3 +157,90 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: Lato;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    font-family: inherit;
+}
+
+.pupup__content {
+    width: 73%;
+    height: 100vh;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    transition: all .4s .2s;
+}
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .pupup__content{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.heading {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #EB4D4D;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.text {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+.item {
+    font-weight: bolder;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.close {
+    color: black;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .2s;
+
+}
+
+.close:hover {
+    color: #EB4D4D;
+}
+
+.author {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 25px;
+    background-color: #EB4D4D;
+    width: 100%;
+}
+.author p{
+    color: white;
+    text-align: center; 
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+}
